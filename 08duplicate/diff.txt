@@ -1,0 +1,13 @@
+Type1,Tool,Number
+wgd.genes,quota_Anchor,12376
+tandem.genes,quota_Anchor,1790
+proximal.genes,quota_Anchor,1100
+transposed.genes,quota_Anchor,9490
+dispersed.genes,quota_Anchor,2546
+singleton.genes,quota_Anchor,9653
+wgd.genes,DupGen_finder,12140
+tandem.genes,DupGen_finder,1868
+proximal.genes,DupGen_finder,1618
+transposed.genes,DupGen_finder,9110
+dispersed.genes,DupGen_finder,6931
+singleton.genes,DupGen_finder,4424

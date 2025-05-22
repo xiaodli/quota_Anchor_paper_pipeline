@@ -1,0 +1,16 @@
+Software	X_variable	number
+quota_align default	1:1	14472
+quota_align default	2:1	4603
+quota_align default	other_ratio	46
+quota_align diamond	1:1	13909
+quota_align diamond	2:1	4453
+quota_align diamond	other_ratio	88
+quota_align blastp	1:1	13913
+quota_align blastp	2:1	4430
+quota_align blastp	other_ratio	86
+quota_Anchor diamond	1:1	13812
+quota_Anchor diamond	2:1	4752
+quota_Anchor diamond	other_ratio	0
+quota_Anchor blastp	1:1	13842
+quota_Anchor blastp	2:1	4762
+quota_Anchor blastp	other_ratio	0

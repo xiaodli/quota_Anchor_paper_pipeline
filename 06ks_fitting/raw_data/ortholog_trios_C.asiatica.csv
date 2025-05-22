@@ -1,0 +1,16 @@
+Node,Focal_Species,Sister_Species,Out_Species
+1,C.asiatica,N.incisum,A.elata
+1,C.asiatica,N.incisum,P.notoginseng
+1,C.asiatica,N.incisum,E.senticosus
+1,C.asiatica,N.incisum,E.breviscapus
+1,C.asiatica,D.carota,A.elata
+1,C.asiatica,D.carota,P.notoginseng
+1,C.asiatica,D.carota,E.senticosus
+1,C.asiatica,D.carota,E.breviscapus
+2,C.asiatica,A.elata,E.breviscapus
+2,C.asiatica,A.elata,V.vinifera
+2,C.asiatica,P.notoginseng,E.breviscapus
+2,C.asiatica,P.notoginseng,V.vinifera
+2,C.asiatica,E.senticosus,E.breviscapus
+2,C.asiatica,E.senticosus,V.vinifera
+3,C.asiatica,E.breviscapus,V.vinifera

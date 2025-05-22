@@ -1,0 +1,7 @@
+species_pair	10-20	20-
+os_sb	214	32
+os_zm	289	45
+sb_zm	215	37
+ta_os	459	63
+ta_sb	330	48
+ta_zm	202	31

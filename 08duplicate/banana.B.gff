@@ -1,0 +1,19 @@
+##gff-version 3
+#!gff-spec-version 1.21
+#!processor NCBI annotwriter
+#!genome-build BananaB_V1
+#!genome-build-accession NCBI_Assembly:GCA_004837865.1
+##sequence-region CM017188.1 1 48736620
+##species https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=52838
+CM017188.1	Genbank	region	1	48736620	.	+	.	ID=CM017188.1:1..48736620;Dbxref=taxon:52838;Name=1;chromosome=1;country=France: Montreal;gbkey=Src;genome=chromosome;isolate=DH-PKW;mol_type=genomic DNA;tissue-type=leaves
+CM017188.1	Genbank	gene	8667	20739	.	+	.	ID=gene-C4D60_Mb01t00010;Name=C4D60_Mb01t00010;gbkey=Gene;gene_biotype=protein_coding;locus_tag=C4D60_Mb01t00010
+CM017188.1	Genbank	mRNA	8667	20739	.	+	.	ID=rna-gnl|WGS:PYDT|mrna.Mb_01_t00010.1;Parent=gene-C4D60_Mb01t00010;gbkey=mRNA;locus_tag=C4D60_Mb01t00010;orig_protein_id=gnl|WGS:PYDT|Mb_01_p00010.1;orig_transcript_id=gnl|WGS:PYDT|mrna.Mb_01_t00010.1;product=hypothetical protein
+CM017188.1	Genbank	exon	8667	8695	.	+	.	ID=exon-gnl|WGS:PYDT|mrna.Mb_01_t00010.1-1;Parent=rna-gnl|WGS:PYDT|mrna.Mb_01_t00010.1;gbkey=mRNA;locus_tag=C4D60_Mb01t00010;orig_protein_id=gnl|WGS:PYDT|Mb_01_p00010.1;orig_transcript_id=gnl|WGS:PYDT|mrna.Mb_01_t00010.1;product=hypothetical protein
+CM017188.1	Genbank	exon	8707	9947	.	+	.	ID=exon-gnl|WGS:PYDT|mrna.Mb_01_t00010.1-2;Parent=rna-gnl|WGS:PYDT|mrna.Mb_01_t00010.1;gbkey=mRNA;locus_tag=C4D60_Mb01t00010;orig_protein_id=gnl|WGS:PYDT|Mb_01_p00010.1;orig_transcript_id=gnl|WGS:PYDT|mrna.Mb_01_t00010.1;product=hypothetical protein
+CM017188.1	Genbank	exon	10035	10308	.	+	.	ID=exon-gnl|WGS:PYDT|mrna.Mb_01_t00010.1-3;Parent=rna-gnl|WGS:PYDT|mrna.Mb_01_t00010.1;gbkey=mRNA;locus_tag=C4D60_Mb01t00010;orig_protein_id=gnl|WGS:PYDT|Mb_01_p00010.1;orig_transcript_id=gnl|WGS:PYDT|mrna.Mb_01_t00010.1;product=hypothetical protein
+CM017188.1	Genbank	exon	13748	13832	.	+	.	ID=exon-gnl|WGS:PYDT|mrna.Mb_01_t00010.1-4;Parent=rna-gnl|WGS:PYDT|mrna.Mb_01_t00010.1;gbkey=mRNA;locus_tag=C4D60_Mb01t00010;orig_protein_id=gnl|WGS:PYDT|Mb_01_p00010.1;orig_transcript_id=gnl|WGS:PYDT|mrna.Mb_01_t00010.1;product=hypothetical protein
+CM017188.1	Genbank	exon	15271	15327	.	+	.	ID=exon-gnl|WGS:PYDT|mrna.Mb_01_t00010.1-5;Parent=rna-gnl|WGS:PYDT|mrna.Mb_01_t00010.1;gbkey=mRNA;locus_tag=C4D60_Mb01t00010;orig_protein_id=gnl|WGS:PYDT|Mb_01_p00010.1;orig_transcript_id=gnl|WGS:PYDT|mrna.Mb_01_t00010.1;product=hypothetical protein
+CM017188.1	Genbank	exon	17200	17259	.	+	.	ID=exon-gnl|WGS:PYDT|mrna.Mb_01_t00010.1-6;Parent=rna-gnl|WGS:PYDT|mrna.Mb_01_t00010.1;gbkey=mRNA;locus_tag=C4D60_Mb01t00010;orig_protein_id=gnl|WGS:PYDT|Mb_01_p00010.1;orig_transcript_id=gnl|WGS:PYDT|mrna.Mb_01_t00010.1;product=hypothetical protein
+CM017188.1	Genbank	exon	17352	17570	.	+	.	ID=exon-gnl|WGS:PYDT|mrna.Mb_01_t00010.1-7;Parent=rna-gnl|WGS:PYDT|mrna.Mb_01_t00010.1;gbkey=mRNA;locus_tag=C4D60_Mb01t00010;orig_protein_id=gnl|WGS:PYDT|Mb_01_p00010.1;orig_transcript_id=gnl|WGS:PYDT|mrna.Mb_01_t00010.1;product=hypothetical protein
+CM017188.1	Genbank	exon	17659	17715	.	+	.	ID=exon-gnl|WGS:PYDT|mrna.Mb_01_t00010.1-8;Parent=rna-gnl|WGS:PYDT|mrna.Mb_01_t00010.1;gbkey=mRNA;locus_tag=C4D60_Mb01t00010;orig_protein_id=gnl|WGS:PYDT|Mb_01_p00010.1;orig_transcript_id=gnl|WGS:PYDT|mrna.Mb_01_t00010.1;product=hypothetical protein
+CM017188.1	Genbank	exon	17998	18331	.	+	.	ID=exon-gnl|WGS:PYDT|mrna.Mb_01_t00010.1-9;Parent=rna-gnl|WGS:PYDT|mrna.Mb_01_t00010.1;gbkey=mRNA;locus_tag=C4D60_Mb01t00010;orig_protein_id=gnl|WGS:PYDT|Mb_01_p00010.1;orig_transcript_id=gnl|WGS:PYDT|mrna.Mb_01_t00010.1;product=hypothetical protein

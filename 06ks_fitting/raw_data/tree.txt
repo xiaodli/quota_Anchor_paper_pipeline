@@ -1,0 +1,31 @@
+Focal species: C.asiatica
+
+Node 1:
+Sister species:      N.incisum, D.carota
+Outgroup species:    A.elata, P.notoginseng, E.senticosus, E.breviscapus
+
+Node 2:
+Sister species:      A.elata, P.notoginseng, E.senticosus
+Outgroup species:    E.breviscapus, V.vinifera
+
+Node 3:
+Sister species:      E.breviscapus
+Outgroup species:    V.vinifera
+
+
+               /-N.incisum
+            /-|
+         /-|   \-D.carota
+        |  |
+        |   \-C.asiatica
+      /-|
+     |  |      /-A.elata
+     |  |   /-|
+   /-|   \-|   \-P.notoginseng
+  |  |     |
+  |  |      \-E.senticosus
+--|  |
+  |   \-E.breviscapus
+  |
+   \-V.vinifera
+
