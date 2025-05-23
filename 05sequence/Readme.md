@@ -59,3 +59,9 @@ python ./03kaksomega27curve/search27csv_get_median_std_average.py
 ```
 bash significant.number.sh
 ```
+## speciation paleo ssd sid number
+```
+bash get.col.total.sh
+bash speciation.paleo.ssdsid.sh
+distance_stack_bar.R
+```
