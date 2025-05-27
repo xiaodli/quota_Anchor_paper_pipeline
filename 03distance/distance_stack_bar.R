@@ -11,7 +11,7 @@ df$species_pair <- factor(df$species_pair,  c("os_sb", "os_zm", "sb_zm", "ta_os"
 print(levels(df$species_pair))
 levels(df$species_pair) <- c("rice vs sorghum", "rice vs maize", "sorghum vs maize", "wheat vs oryza", "wheat vs sorghum", "wheat vs maize")
 plot = ggplot(df, aes(x=species_pair, y=value, fill=factor(variable,levels = unique(variable)), )) +
-  labs(x="", y="The distance between adjacent gene pairs \n for each block", fill="Distance range") +  
+  labs(x="", y="Number of adjacent gene pairs with intergenic distances between 10 and 20, or greater than 20.", fill="Distance range") +  
   scale_y_continuous(expand=expansion(mult = c(0, 0.1))) + 
   geom_bar(position="stack",stat="identity")  + 
   scale_fill_manual(values = custom_colors) + 
