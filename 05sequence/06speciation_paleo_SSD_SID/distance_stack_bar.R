@@ -32,10 +32,13 @@ plot = ggplot(df, aes(x=Stage, y=Ratio, fill = Stage)) +
                    pattern_key_scale_factor = 0.1) +
   scale_pattern_manual(values = c(`SID` = "stripe", `SSD` = NA)) +
   scale_fill_manual(values = custom_colors) + 
-  guides(
-    fill = guide_legend(override.aes = list(pattern = "none")),
-    pattern = guide_legend(title = "Type")
-  )+
+guides(
+  fill = guide_legend(override.aes = list(pattern = "none")),
+  pattern = guide_legend(
+    title = "Type",
+    override.aes = list(fill = "white")
+  )
+) +
   theme(axis.title.x=element_blank(),          
         panel.background = element_blank(),
         panel.spacing = unit(0.05, "lines"),
