@@ -9,7 +9,7 @@ custom = c("#F3BDA5", "#FFC0CB", "#B7E4C7","#D8B4E2","#1f77b4", "#F9D68D","#FF84
 custom_colors = c(`10-20` =  "#F3BDA5", `20-` = "#B7E4C7")
 df$species_pair <- factor(df$species_pair,  c("os_sb", "os_zm", "sb_zm", "ta_os", "ta_sb", "ta_zm"))
 print(levels(df$species_pair))
-levels(df$species_pair) <- c("rice vs sorghum", "rice vs maize", "sorghum vs maize", "wheat vs oryza", "wheat vs sorghum", "wheat vs maize")
+levels(df$species_pair) <- c("rice vs sorghum", "rice vs maize", "sorghum vs maize", "wheat vs rice", "wheat vs sorghum", "wheat vs maize")
 plot = ggplot(df, aes(x=species_pair, y=value, fill=factor(variable,levels = unique(variable)), )) +
   labs(x="", y="Number of adjacent gene pairs with intergenic \ndistances between 10 and 20, or greater than 20", fill="Distance range") +  
   scale_y_continuous(expand=expansion(mult = c(0, 0.1))) + 
