@@ -55,10 +55,7 @@ mkdir -p ./03kaksomega27curve/omega_curve
 python ./03kaksomega27curve/search27csv_get_median_std_average.py
 ./03kaksomega27curve/final27_curve_plot.R
 ```
-## significant(1000 times for yn00 ng86 ma)
-```
-bash significant.number.sh
-```
+
 ## speciation paleo ssd sid number
 ```
 bash get.col.total.sh
