@@ -12,10 +12,10 @@ custom_colors = c(`Speciation` =  "#F3BDA5", `Paleo` = "#B7E4C7")
 df$Species <- factor(df$Species)
 df$Stage <- factor(df$Stage,levels = c("Speciation", "Paleo"))
 df$Type <- factor(df$Type, levels = c("SSD", "SID"))
-
+levels(df$Type) <- c("NRIGP", "RIGP")
 plot = ggplot(df, aes(x=Stage, y=Ratio, fill = Stage)) +
   facet_nested(~Species, switch="x") +
-  labs(x="", y="Ratios of SSD and SID in paleo-WGD-derived \nand speciation-derived collinear gene pairs(%)", fill="Different stages") +  
+  labs(x="", y="Ratios of NRIGP and RIGP in paleo-WGD-derived \nand speciation-derived collinear gene pairs(%)", fill="Different stages") +  
   scale_y_continuous(expand=c(0, 0)) +
   geom_bar_pattern(data = df,
                    aes(x = Stage, y = Ratio, pattern = Type),
@@ -30,15 +30,15 @@ plot = ggplot(df, aes(x=Stage, y=Ratio, fill = Stage)) +
                    pattern_size = 0.2,
                    width = 1,
                    pattern_key_scale_factor = 0.1) +
-  scale_pattern_manual(values = c(`SID` = "stripe", `SSD` = NA)) +
+  scale_pattern_manual(values = c(`RIGP` = "stripe", `NRIGP` = NA)) +
   scale_fill_manual(values = custom_colors) + 
-guides(
-  fill = guide_legend(override.aes = list(pattern = "none")),
-  pattern = guide_legend(
-    title = "Type",
-    override.aes = list(fill = "white")
-  )
-) +
+  guides(
+    fill = guide_legend(override.aes = list(pattern = "none")),
+    pattern = guide_legend(
+      title = "Type",
+      override.aes = list(fill = "white")
+    )
+  )+
   theme(axis.title.x=element_blank(),          
         panel.background = element_blank(),
         panel.spacing = unit(0.05, "lines"),
@@ -63,7 +63,6 @@ guides(
 png("/media/dell/E/Suppmentary_data/05sequence/06speciation_paleo_SSD_SID/speciation.paleo.ssd.sid.R.png", width=1800, height=1100, res=300)
 print(plot)
 dev.off()
-
 
 
 

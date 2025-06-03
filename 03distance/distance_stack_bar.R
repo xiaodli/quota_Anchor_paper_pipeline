@@ -6,7 +6,7 @@ head(df)
 df = melt(df)                    
 df   
 custom = c("#F3BDA5", "#FFC0CB", "#B7E4C7","#D8B4E2","#1f77b4", "#F9D68D","#FF847C","#E0E0E0","#7FBEEB", "#B19CD9","#F89CAE","#5FC8D1","#FDFD96","#e377c2","#d62728", "#AED9E0")
-custom_colors = c(`10-20` =  "#F3BDA5", `20-` = "#B7E4C7")
+custom_colors = c(`10-20` =  "#F3BDA5", `>20` = "#B7E4C7")
 df$species_pair <- factor(df$species_pair,  c("os_sb", "os_zm", "sb_zm", "ta_os", "ta_sb", "ta_zm"))
 print(levels(df$species_pair))
 levels(df$species_pair) <- c("rice vs sorghum", "rice vs maize", "sorghum vs maize", "wheat vs rice", "wheat vs sorghum", "wheat vs maize")

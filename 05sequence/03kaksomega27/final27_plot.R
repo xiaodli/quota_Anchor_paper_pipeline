@@ -6,14 +6,14 @@ library(grid)
 
 plot_total <- function (file, out_file, parameter3, parameter4, parameter5=3.3){
 
-my_comparisons <- list( c("SSD", "SID"))
+my_comparisons <- list( c("NRIGP", "RIGP"))
 data =read.table(file, header = TRUE, sep=",")
 data$Type <- factor(data$Type,  c("Speciation_gene_pairs_same_direction", "Speciation_gene_pairs_inverse_direction"))
 # print(levels(data$Type))
-custom_colors <- c(SSD = "#F8766D", SID = "#00BFC4")
-custom_colors_light <- c(SSD = "#D2E7F2", SID = "#B2D8B4")
-custom_colors_dark <- c(SSD = "#A6CEE3", SID = "#7DCA7C")
-levels(data$Type) <- c("SSD", "SID")
+custom_colors <- c(NRIGP = "#F8766D", RIGP = "#00BFC4")
+custom_colors_light <- c(NRIGP = "#D2E7F2", RIGP = "#B2D8B4")
+custom_colors_dark <- c(NRIGP = "#A6CEE3", RIGP = "#7DCA7C")
+levels(data$Type) <- c("NRIGP", "RIGP")
 plot <- ggplot(data, aes(x=Type, y=!!sym(parameter4), fill=Type, color=Type)) + 
   facet_nested(~Species, switch="x") +
   # geom_violin(width=1, alpha=0.5, linewidth=0.1) +

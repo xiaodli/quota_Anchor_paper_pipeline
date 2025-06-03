@@ -5,20 +5,20 @@ library(ggh4x)
 library(grid)
 plot_total <- function (file, out_file, parameter3){
 
-custom_colors_dark1111 <- c(SGP = "#B43665", PGP = "#8560AF", HGP="#6FA6CF")
-custom_colors_light1111 <- c(SGP = "#D84179", PGP = "#A073D2", HGP="#85C7F8")
-custom_colors_dark <- c(SGP = "#C29784", PGP = "#92B69F", HGP="#6698BC")
-custom_colors_light <- c(SGP = "#F3BDA5", PGP = "#B7E4C7", HGP="#7FBEEB")
-my_comparisons <- list( c("SGP", "PGP"), c("SGP", "HGP"), c("PGP", "HGP"))
+custom_colors_dark1111 <- c(SGP = "#B43665", PGP = "#8560AF", NGP="#6FA6CF")
+custom_colors_light1111 <- c(SGP = "#D84179", PGP = "#A073D2", NGP="#85C7F8")
+custom_colors_dark <- c(SGP = "#C29784", PGP = "#92B69F", NGP="#6698BC")
+custom_colors_light <- c(SGP = "#F3BDA5", PGP = "#B7E4C7", NGP="#7FBEEB")
+my_comparisons <- list( c("SGP", "PGP"), c("SGP", "NGP"), c("PGP", "NGP"))
 data =read.table(file, header = TRUE, sep=",")
 data$Type <- factor(data$Type,  c("Speciation_gene_pairs", "Paleo_gene_pairs", "Homologous_gene_pairs"))
 levels(data$Type)
-levels(data$Type) <- c("SGP", "PGP", "HGP")
+levels(data$Type) <- c("SGP", "PGP", "NGP")
 plot <- ggplot(data, aes(x=Type, y=Corr_Value, fill=Type, color=Type)) + 
   facet_nested(~species_pair+tissue_time, switch="x") +
   # geom_violin(width=0.4, alpha=0.8, linewidth=0.1) +
   geom_boxplot(position = position_dodge(width = 0.1),width=1, alpha=1, size=0.1, outliers = FALSE,  staplewidth = 0.3) +
-  # stat_compare_means(label = "p.signif", size=1.5, comparisons=my_comparisons,  tip.length = 0.01, bracket.size = 0.04, step.increase = 0.09, hide.ns = FALSE, method = "wilcox.test")  + 
+  # stat_compare_means(label = "p.format", size=0.5, comparisons=my_comparisons,  tip.length = 0.01, bracket.size = 0.04, step.increase = 0.09, hide.ns = FALSE, method = "wilcox.test")  +
   # scale_fill_viridis(discrete = TRUE) +
   scale_fill_manual(values = custom_colors_light) +
   scale_color_manual(values = custom_colors_dark) +

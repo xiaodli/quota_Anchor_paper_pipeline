@@ -4,7 +4,7 @@ import sys
 
 distance_file = sys.argv[1]
 distance_file_R_format = open(sys.argv[2], "w")
-distance_file_R_format.write("species_pair" + "\t" + "10-20" + "\t" + "20-" + "\n")
+distance_file_R_format.write("species_pair" + "\t" + "10-20" + "\t" + ">20" + "\n")
 
 df = pd.read_csv(distance_file, header=None, index_col=None, sep='\t')
 df.columns = ['species_pair', 'query_distance', "ref_distance", "block_length"]

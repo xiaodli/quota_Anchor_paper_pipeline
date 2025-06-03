@@ -9,10 +9,10 @@ custom = c("#F3BDA5", "#FFC0CB", "#B7E4C7","#D8B4E2","#1f77b4", "#F9D68D","#FF84
 
 data =read.table(file, header = TRUE, sep = ",")
 data$Type <- factor(data$Type)
-print(levels(data$Type))
-custom_colors <- c(SSD = "#F8766D", SID = "#00BFC4")
-custom_colors_light <- c(SSD = "#D2E7F2", SID = "#B2D8B4")
-custom_colors_dark <- c(SSD = "#A6CEE3", SID = "#7DCA7C")
+levels(data$Type) <- c("NRIGP", "RIGP")
+custom_colors <- c(RIGP = "#F8766D", NRIGP = "#00BFC4")
+custom_colors_light <- c(RIGP = "#D2E7F2", NRIGP = "#B2D8B4")
+custom_colors_dark <- c(RIGP = "#A6CEE3", NRIGP = "#7DCA7C")
 print(data)
 
 

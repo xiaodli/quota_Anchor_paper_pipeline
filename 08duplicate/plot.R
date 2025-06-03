@@ -37,7 +37,7 @@ plot = p +  geom_bar(position=position_dodge(width = 1),width=1,stat="identity")
         strip.placement = "outside", 
         strip.clip="off",
         strip.text = element_text(size = 25, angle=70, margin = margin(c(0,0,0,0)), colour = "black"))
-png("diff.png", width=1216, height=825, res=100)
+png("/media/dell/E/Suppmentary_data/08duplicate/diff.png", width=1216, height=825, res=100)
 print(plot)
 dev.off()
 

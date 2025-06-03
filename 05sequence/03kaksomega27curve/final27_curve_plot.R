@@ -6,10 +6,10 @@ plot_total <- function (file, out_file, parameter3, parameter4){
 data =read.table(file, header = TRUE, sep=",")
 data$Type <- factor(data$Type,  c("Speciation_gene_pairs_same_direction", "Speciation_gene_pairs_inverse_direction"))
 print(levels(data$Type))
-custom_colors <- c(SSD = "#F8766D", SID = "#00BFC4")
-custom_colors_light <- c(SSD = "#D2E7F2", SID = "#B2D8B4")
-custom_colors_dark <- c(SSD = "#A6CEE3", SID = "#7DCA7C")
-levels(data$Type) <- c("SSD", "SID")
+custom_colors <- c(NRIGP = "#F8766D", RIGP = "#00BFC4")
+custom_colors_light <- c(NRIGP = "#D2E7F2", RIGP = "#B2D8B4")
+custom_colors_dark <- c(NRIGP = "#A6CEE3", RIGP = "#7DCA7C")
+levels(data$Type) <- c("NRIGP", "RIGP")
 plot <- ggplot(data, aes(x=species, y=!!sym(parameter3))) + 
   geom_point(size=1.25, aes(shape=Type, color=Type)) + 
   geom_line(aes(group=Type, color=Type), linewidth=0.1) + 

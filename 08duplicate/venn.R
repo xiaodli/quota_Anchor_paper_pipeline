@@ -21,7 +21,7 @@ maize <- venn.diagram(x=maize, filename = NULL, alpha=c(0.6, 0.6, 0.1),
                       lwd=c(1,1,1),cex=1,
                       cat.pos=c(0,0,180),
                       resolution = 500,
-                      cat.dist=c(-0.05, -0.02,-0.05),
+                      cat.dist=c(-0.1, -0.05,-0.05),
                       cat.cex=1)
 cowplot::plot_grid(maize)
 

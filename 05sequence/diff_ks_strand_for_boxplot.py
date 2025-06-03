@@ -94,8 +94,8 @@ def main(parameter):
                          "same_or_inverse", "score"]
     df = df[["query_name", "ref_name", "same_or_inverse"]]
     same, inv= split_inv_normal_to_pair(df)
-    same = random.choices(same, k=50000)
-    inv = random.choices(inv, k=10000)
+    # same = random.choices(same, k=50000)
+    # inv = random.choices(inv, k=10000)
 
 
     recent_same_ks = []
