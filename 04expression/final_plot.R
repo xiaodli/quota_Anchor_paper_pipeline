@@ -4,13 +4,13 @@ library(ggpubr)
 library(ggh4x)
 library(grid)
 plot_total <- function (file, out_file, parameter3){
-custom_colors_light <- c(SSD = "#D2E7F2", SID = "#B2D8B4")
-custom_colors_dark <- c(SSD = "#A6CEE3", SID = "#7DCA7C")
-my_comparisons <- list( c("SSD", "SID"))
+custom_colors_light <- c(NRIGP = "#D2E7F2", RIGP = "#B2D8B4")
+custom_colors_dark <- c(NRIGP = "#A6CEE3", RIGP = "#7DCA7C")
+my_comparisons <- list( c("NRIGP", "RIGP"))
 data =read.table(file, header = TRUE, sep=",")
 data$Type <- factor(data$Type,  c("Speciation_gene_pairs_same_direction", "Speciation_gene_pairs_inverse_direction"))
 levels(data$Type)
-levels(data$Type) <- c("SSD", "SID")
+levels(data$Type) <- c("NRIGP", "RIGP")
 plot <- ggplot(data, aes(x=Type, y=Corr_Value, fill=Type, color=Type)) + 
   facet_nested(~ species_pair + tissue_time, switch = "x") +
   # facet_grid(~species_pair+tissue_time, scales = "free", space = "free") +
