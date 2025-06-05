@@ -102,7 +102,8 @@ python parse_collinearity_file_gene_pairs.py ./JCVI_result/01default/zm.sb.2x1.a
 Rscript ./stack_bar.R
 
 ## Supplementary figure
+```
 quota_Anchor col -i ./quota_Anchor_result/01diamond/sb_zm.table -o ./quota_Anchor_result/01diamond/sb_zm.total.collinearity -m 500 -W 5 -D 25 -I 2 -f 0 -s 0 -t 0 --overwrite -a 1
 quota_Anchor ks -i ./quota_Anchor_result/01diamond/sb_zm.total.collinearity -a muscle -p ./quota_Anchor_result/sb.pep,./quota_Anchor_result/zm.pep -d ./quota_Anchor_result/sb.cds,./quota_Anchor_result/zm.cds  -o ./quota_Anchor_result/01diamond/sb_zm.ks -t 16 -add_ks 
 quota_Anchor dotplot -i ./quota_Anchor_result/01diamond/sb_zm.total.collinearity -o ./quota_Anchor_result/01diamond/sb_zm.total.ks.png -r ./quota_Anchor_result/sb.length.txt -q ./quota_Anchor_result/zm.length.txt -r_label "Sorghum bicolor" -q_label "Zea mays" --overwrite -ks ./quota_Anchor_result/01diamond/sb_zm.ks
-
+```
