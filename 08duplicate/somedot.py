@@ -21,6 +21,6 @@ ax.set(xlim=(0, 10), xticks=np.arange(1, 10),
        ylim=(0, 10), yticks=np.arange(1, 10))
 for xi, yi, color, marker in zip(x, y, colors, shapes):
     ax.scatter(xi, yi, c=color, marker=marker)
-ax.set_xlabel("Gene rank position", fontsize=15)
-ax.set_ylabel("Gene rank position", fontsize=15)
+ax.set_xlabel("Gene rank", fontsize=15)
+ax.set_ylabel("Gene rank", fontsize=15)
 plt.savefig('class_dot.png')
