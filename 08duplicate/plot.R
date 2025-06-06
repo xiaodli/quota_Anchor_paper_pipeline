@@ -23,7 +23,7 @@ plot = p +  geom_bar(position=position_dodge(width = 1),width=1,stat="identity")
         legend.box.spacing = unit(0, "cm"),
         legend.key.spacing.y = unit(0.75, "cm"),
         legend.position = "inside", 
-        legend.position.inside = c(0.70, 0.88), 
+        legend.position.inside = c(0.75, 0.88), 
         legend.background = element_rect(linetype = "solid", linewidth = 0, colour = "black", fill = NA),
         
         axis.text.x = element_blank(),
