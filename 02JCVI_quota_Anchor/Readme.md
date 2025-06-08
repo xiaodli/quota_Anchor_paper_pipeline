@@ -98,9 +98,9 @@ python parse_collinearity_file.py ./JCVI_result/01default/zm.sb.2x1.anchors.txt 
 ```bash
 python parse_collinearity_file_gene_pairs.py ./JCVI_result/01default/zm.sb.2x1.anchors.txt ./JCVI_result/02diamond/zm.sb.2x1.anchors.txt ./JCVI_result/03blast/zm.sb.2x1.anchors.txt ./quota_Anchor_result/01diamond/sb2_zm1.table.collinearity.txt ./quota_Anchor_result/02blastp/sb2_zm1.table.collinearity.txt venn.txt five_type_bar_gene_pairs.txt
 ```
-
+```
 Rscript ./stack_bar.R
-
+```
 ## Supplementary figure
 ```
 quota_Anchor col -i ./quota_Anchor_result/01diamond/sb_zm.table -o ./quota_Anchor_result/01diamond/sb_zm.total.collinearity -m 500 -W 5 -D 25 -I 2 -f 0 -s 0 -t 0 --overwrite -a 1
