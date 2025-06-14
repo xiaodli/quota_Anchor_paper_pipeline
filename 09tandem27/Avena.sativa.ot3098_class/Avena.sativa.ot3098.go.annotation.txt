@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0016747	gene:AVESA.00001b.r3.2Ag0000075	acyltransferase activity, transferring groups other than amino-acyl groups

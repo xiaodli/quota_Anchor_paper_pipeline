@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0051513	gene:SECCE2Rv1G0083570	regulation of monopolar cell growth

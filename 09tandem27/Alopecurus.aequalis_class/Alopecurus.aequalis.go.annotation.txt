@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0004553	Alaeq_EIv0.2_0471030	hydrolase activity, hydrolyzing O-glycosyl compounds

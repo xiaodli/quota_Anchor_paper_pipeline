@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0051536	gene:PAHAL_7G153000	iron-sulfur cluster binding

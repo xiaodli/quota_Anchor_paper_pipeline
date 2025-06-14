@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0016757	TmPI306540.4A01G0310000	glycosyltransferase activity

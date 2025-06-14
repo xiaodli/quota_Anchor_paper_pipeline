@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0004672	OkoG028476	protein kinase activity

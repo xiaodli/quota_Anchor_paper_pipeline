@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0005515	gene:Sspon.03G0022690-3D	protein binding

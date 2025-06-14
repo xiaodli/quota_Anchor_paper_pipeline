@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0005515	gene:LPERR05G20320	protein binding

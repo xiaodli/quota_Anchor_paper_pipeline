@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0006952	gene-NCGR_LOCUS56443	defense response

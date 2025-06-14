@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0003735	HORMACH07G03630400	structural constituent of ribosome

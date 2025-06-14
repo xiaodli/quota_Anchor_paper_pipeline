@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0004497	PoaAnPa1Ag003770	monooxygenase activity

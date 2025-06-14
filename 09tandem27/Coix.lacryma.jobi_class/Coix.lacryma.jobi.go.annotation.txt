@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0000076	Cl024976	DNA replication checkpoint signaling

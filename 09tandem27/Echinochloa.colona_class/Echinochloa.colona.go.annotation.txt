@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0004252	FL01.2225	serine-type endopeptidase activity

@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0010333	ChlVi6_RagTagg267100	terpene synthase activity

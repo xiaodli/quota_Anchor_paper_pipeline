@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0005515	gene:Et_9B_064112	protein binding

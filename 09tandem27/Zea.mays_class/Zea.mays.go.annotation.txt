@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0005634	gene:Zm00001eb068550	nucleus

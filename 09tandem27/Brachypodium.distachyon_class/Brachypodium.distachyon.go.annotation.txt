@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0005741	gene:BRADI_2g18610v3	mitochondrial outer membrane

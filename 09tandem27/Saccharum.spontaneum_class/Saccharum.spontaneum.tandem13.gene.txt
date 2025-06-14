@@ -1,0 +1,13 @@
+gene:Sspon.06G0020630-1B
+gene:Sspon.06G0020640-1B
+gene:Sspon.06G0020640-1P
+gene:Sspon.06G0020650-1B
+gene:Sspon.06G0020660-1B
+gene:Sspon.06G0020670-1B
+gene:Sspon.06G0020680-1B
+gene:Sspon.06G0020690-1B
+gene:Sspon.06G0020700-1B
+gene:Sspon.06G0020710-1B
+gene:Sspon.06G0020750-1B
+gene:Sspon.06G0020710-1P
+gene:Sspon.06G0020660-1P

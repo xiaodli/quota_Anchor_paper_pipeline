@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0004124	Tel3E01G154400	cysteine synthase activity

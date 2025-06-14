@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0003676	gene:Os10g0471350	nucleic acid binding

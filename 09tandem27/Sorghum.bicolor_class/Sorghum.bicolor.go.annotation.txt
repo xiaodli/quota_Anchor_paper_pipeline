@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0005525	gene:SORBI_3001G023400	GTP binding

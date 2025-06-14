@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0003824	EVM0003546	catalytic activity

@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0003684	gene:SETIT_016596mg	damaged DNA binding

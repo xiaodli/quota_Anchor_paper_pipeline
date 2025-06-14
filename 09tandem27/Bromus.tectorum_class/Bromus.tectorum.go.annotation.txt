@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0008270	Bt025819	zinc ion binding

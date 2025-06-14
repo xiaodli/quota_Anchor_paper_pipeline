@@ -1,0 +1,2 @@
+GO_ID	Genes	GO_Name
+GO:0035529	gene:SEVIR_7G199400v2	NADH pyrophosphatase activity
