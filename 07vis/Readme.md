@@ -3,7 +3,7 @@
 ```
 bash 11col.sh
 ```
-## visulation
+## visualization
 ```
 cd collinearity
 cp /media/dell/E/Suppmentary_data/05sequence/01pipeline_raw_data/*length* .
