@@ -19,8 +19,8 @@ max_tandem_length <- max(df$Cluster_length_max)
 scale_factor <- max_cluster_num / max_tandem_length
 
 plot = ggplot(df, aes(x=Species, y=Cluster_number)) +
-  labs(x="", y="Number of duplication clusters per species\n(max proximal distance = 5)") +  
-  scale_y_continuous(expand=c(0, 0), sec.axis = sec_axis(~ . / scale_factor, name="Gene count in largest tandem cluster")) +
+  labs(x="", y="Clusters number(Depth)") +  
+  scale_y_continuous(expand=c(0, 0), sec.axis = sec_axis(~ . / scale_factor, name="Max cluster length(Depth)")) +
 
   geom_bar(data = df, aes(x = Species, y = Cluster_number, fill = Depth, alpha = Depth), position="identity",stat="identity")  + 
   
@@ -33,7 +33,7 @@ plot = ggplot(df, aes(x=Species, y=Cluster_number)) +
   
   guides(
     fill = guide_legend(title = "Clusters number(Depth)", override.aes = list(alpha = NA, color = NA), order = 1),
-    color = guide_legend(title = "Gene count(Depth)", override.aes = list(alpha = NA), order = 2),
+    color = guide_legend(title = "Max cluster length(Depth)", override.aes = list(alpha = NA), order = 2),
     alpha = "none"
   )+
   
@@ -49,14 +49,14 @@ plot = ggplot(df, aes(x=Species, y=Cluster_number)) +
         axis.ticks.length = unit(0.5, "mm"),
         axis.ticks = element_line(linewidth = 0.1),
         axis.ticks.x = element_blank(),
-        axis.text.x = element_text(size = 7, angle=300, hjust=0, vjust=1, colour = "black", face ="italic"),
-        axis.text.y = element_text(size = 7),
+        axis.text.x = element_text(size = 9, angle=300, hjust=0, vjust=1, colour = "black", face ="italic"),
+        axis.text.y = element_text(size = 9),
         axis.line.x = element_line(color = "black", linewidth = 0.15),
         axis.line.y = element_line(color = "black", linewidth = 0.15),
-        axis.title.y = element_text(size=9),
+        axis.title.y = element_text(size=11),
         
-        legend.title = element_text(size = 7, hjust=0.5),
-        legend.text = element_text(size = 6.5, hjust=0.5),
+        legend.title = element_text(size = 8.5, hjust=0.5),
+        legend.text = element_text(size = 7.5, hjust=0.5),
         legend.box.spacing = unit(0, "cm"),
         legend.key.spacing.x = unit(1.2, "cm"),
         legend.background = element_rect(fill = "white"),

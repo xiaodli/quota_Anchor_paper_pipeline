@@ -30,7 +30,7 @@ plot_go_result <- function (enricher_result, out_file, tandem_title=""){
   } else if (nrow(data) <8){
     img_width <- 1300
   } else{
-    img_width <- 1700
+    img_width <- 1850
   }
   color_label_redox_homeostasis_and_abiotic_stress_response <- c("aldo-keto reductase (NADPH) activity",
                                                                  "methyl salicylate esterase activity",
@@ -87,18 +87,18 @@ plot_go_result <- function (enricher_result, out_file, tandem_title=""){
           panel.background = element_blank(),
           panel.border = element_rect(fill=NA,color="black", linewidth=0.3, linetype="solid"),
           
-          legend.title = element_text(size =8, margin = margin(b = 0.2, l = 0.2, unit = "cm")),
+          legend.title = element_text(size =10, margin = margin(b = 0.2, l = 0.2, unit = "cm")),
           legend.key.size = unit(0.3, "lines"),
           legend.key.height = unit(0.2, "cm"),
-          legend.text = element_text(size = 6),
+          legend.text = element_text(size = 8),
           
           legend.position="right",
           legend.spacing.y = unit(1.5, "cm"),
           legend.box.spacing = unit(0, "cm"),
           legend.background = element_rect(linetype = "solid", linewidth = 0, colour = "black", fill = NA),
           
-          axis.text.y = ggtext::element_markdown(size = 8), 
-          axis.text.x = element_text(size = 6, angle=300, hjust=0, vjust=1, colour = "black"),
+          axis.text.y = ggtext::element_markdown(size = 10), 
+          axis.text.x = element_text(size = 8, angle=300, hjust=0, vjust=1, colour = "black"),
           
           axis.ticks = element_line(linewidth = 0.15),
           axis.ticks.length = unit(0.4, "mm"),
@@ -107,9 +107,9 @@ plot_go_result <- function (enricher_result, out_file, tandem_title=""){
           axis.line.x = element_line(color = "black", linewidth = 0.1),
           axis.line.y = element_line(color = "black", linewidth = 0.1),
           
-          plot.title = element_text(size = 8, hjust = 0.5),
+          plot.title = element_text(size = 10, hjust = 0.5),
           
-          axis.title.x = element_text(size=7),
+          axis.title.x = element_text(size=9),
           axis.title.y = element_blank()) +
     scale_y_discrete(labels = data_sorted$Description_colored)
   png(out_file, width=img_width, height=1400, res=300)
@@ -215,7 +215,6 @@ enricher_result="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem16.enric
 out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem16.enricher.result.png"
 enrich_func(all_input, tandem_list_file, enricher_result)
 plot_go_result_longer(enricher_result, out_file, "GO enrichment for gene clusters with length ≥ 16")
-
 
 
 
