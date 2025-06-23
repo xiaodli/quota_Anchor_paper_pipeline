@@ -21,7 +21,7 @@ plot <- ggplot(data, aes(x="", y=Ratio, fill=Type, color=Type)) +
              shrink = FALSE, as.table = TRUE, drop = TRUE) +
   geom_bar(width = 0.01, stat = "identity", linewidth=0.1) +
   coord_polar("y", start = 0)+
-  geom_text(aes(label=paste0(Number, "\n", "(",  Ratio, "%)")), position=position_stack(vjust=0.5), size = 3, color="#F8766D")+
+  geom_text(aes(label=paste0(Number, "\n", "(",  Ratio, "%)")), position=position_stack(vjust=0.5), size = 1.5, color="#F8766D")+
   # geom_text(aes(y = lab.ypos, label = prop), color = "white")+
   # scale_fill_manual(values = custom_colors_dark) +
   # theme_void()
@@ -36,9 +36,9 @@ plot <- ggplot(data, aes(x="", y=Ratio, fill=Type, color=Type)) +
         # panel.border = element_blank(),
         panel.border = element_rect(fill=NA,color="black", linewidth=0.1, linetype="solid"),
 
-        legend.title = element_text(size = 15, margin = margin(r = 0.6, unit = "cm")),
-        legend.key.size = unit(1.5, "lines"),
-        legend.text = element_text(size = 12),
+        legend.title = element_text(size = 12, margin = margin(r = 0.6, unit = "cm")),
+        legend.key.size = unit(1, "lines"),
+        legend.text = element_text(size = 8),
         # legend.position = c(0.1, 0.8),
         # legend.position = "inside",
         # legend.position.inside = c(0.1, 0.8),
@@ -53,7 +53,7 @@ plot <- ggplot(data, aes(x="", y=Ratio, fill=Type, color=Type)) +
 
         # strip.background = element_rect(linewidth = 0.1, linetype="solid"),
         strip.background = element_blank(),
-        strip.text = element_text(size = 15, face = "italic"),
+        strip.text = element_text(size = 6.5, face = "italic"),
         # axis.ticks = element_line(linewidth = 0.1),
         axis.ticks = element_blank(),
         # axis.ticks.length = unit(0.2, "mm"),
@@ -67,10 +67,10 @@ plot <- ggplot(data, aes(x="", y=Ratio, fill=Type, color=Type)) +
         # legend.position = 'none') +
   # labs(y = parameter3)
   # coord_cartesian(ylim = c(0, parameter5))
-# png(out_file, width=1800, height=1200, res=500)
-pdf(out_file, width=16, height=12)
+png(out_file, width=1800, height=1200, res=300)
+# pdf(out_file, width=16, height=12)
 print(plot)
 dev.off()
 }
 
-plot_total_pdf("/media/dell/E/Suppmentary_data/05sequence/04SSDSIDnumber/identity.txt", "/media/dell/E/Suppmentary_data/05sequence/04SSDSIDnumber/identity.pdf", "Identity", "identity", 1.3)
+plot_total_pdf("/media/dell/E/Suppmentary_data/05sequence/04SSDSIDnumber/identity.txt", "/media/dell/E/Suppmentary_data/05sequence/04SSDSIDnumber/identity.jpg", "Identity", "identity", 1.3)
