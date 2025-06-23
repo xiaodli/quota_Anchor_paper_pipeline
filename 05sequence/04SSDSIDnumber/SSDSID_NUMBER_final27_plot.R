@@ -53,7 +53,7 @@ plot <- ggplot(data, aes(x="", y=Ratio, fill=Type, color=Type)) +
 
         # strip.background = element_rect(linewidth = 0.1, linetype="solid"),
         strip.background = element_blank(),
-        strip.text = element_text(size = 6.5, face = "italic"),
+        strip.text = element_text(size = 6.3, face = "italic"),
         # axis.ticks = element_line(linewidth = 0.1),
         axis.ticks = element_blank(),
         # axis.ticks.length = unit(0.2, "mm"),
