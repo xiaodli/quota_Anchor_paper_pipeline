@@ -1,4 +1,4 @@
-# 不同版本基因名字转换
+# 不同版本编码基因名字转换
 
 ## 安装quota_Anchor并下载一些可有可无的脚本
 
@@ -91,4 +91,9 @@ quota_Anchor col -i zea.mays_ncbi.table -o zea.mays_ncbi.table.collinearity -s 0
 
 ```bash
 quota_Anchor dotplot -i zea.mays_ncbi.table.collinearity  -o zea.mays_ncbi.table.collinearity.png -r raw_data/Zea.mays.length.txt -q raw_data/zm.ncbi.length.txt -t order -r_label "Ensembl" -q_label "Ncbi" -w 1500 -e 1200 --overwrite                      
+```
+
+## Note
+```
+你也可以使用当前目录下的shell脚本代替quota_Anchor `pre_col` `col`两个步骤,从而使用你自定义参数生成的blast文件而不是quota_Anchor所使用的blast参数（不论是blastp还是diamond都存在极个别序列相同但是比对不上的情况，因此如果你想或者更准确的结果，建议增加max_target_seq参数的大小，比如设置为50. 现在很多人可能会将该参数设置为10或者20左右.对于diamond你也可以使用--sensitive模式）.
 ```
