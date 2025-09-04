@@ -1,5 +1,6 @@
 # ks_fitting
 ## raw_data directory and tree topology
+```
 ├── A.elata.fa
 ├── A.elata.gff3
 ├── C.asiatica.fa
@@ -32,7 +33,7 @@
   |   \-E.breviscapus
   |
    \-V.vinifera
-
+```
 ## get longest pep
 ```
 python ./scripts/longest_pipeline.py -i raw_data -o output_dir
