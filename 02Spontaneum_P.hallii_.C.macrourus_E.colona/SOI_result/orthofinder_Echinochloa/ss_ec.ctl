@@ -1,0 +1,4 @@
+1500
+1500
+ecDL01,ecDL02,ecDL03,ecDL04,ecDL05,ecDL06,ecDL07,ecDL08,ecDL09,ecEL01,ecEL02,ecEL03,ecEL04,ecEL05,ecEL06,ecEL07,ecEL08,ecEL09,ecFL01,ecFL02,ecFL03,ecFL04,ecFL05,ecFL06,ecFL07,ecFL08,ecFL09
+ss1A,ss1B,ss1C,ss1D,ss2A,ss2B,ss2C,ss2D,ss3A,ss3B,ss3C,ss3D,ss4A,ss4B,ss4C,ss4D,ss5A,ss5B,ss5C,ss5D,ss6A,ss6B,ss6C,ss6D,ss7A,ss7B,ss7C,ss7D,ss8A,ss8B,ss8C,ss8D

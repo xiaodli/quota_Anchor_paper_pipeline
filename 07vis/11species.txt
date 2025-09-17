@@ -1,0 +1,11 @@
+Brachypodium.distachyon 1
+Bromus.tectorum 1
+Eragrostis.tef 2
+Leersia.perrieri 2
+Oryza.sativa 1
+Panicum.hallii 1
+Poa.annua 2
+Secale.cereale 1
+Setaria.viridis 1
+Sorghum.bicolor 1
+Zea.mays 2
