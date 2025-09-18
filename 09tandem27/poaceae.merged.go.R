@@ -185,7 +185,7 @@ tandem_list_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem.txt"
 enricher_result="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem.enricher.result.txt"
 out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem.enricher.result.pdf"
 enrich_func(all_input, tandem_list_file, enricher_result)
-plot_go_result(enricher_result, out_file, "GO enrichment for tandem genes")
+plot_go_result(enricher_result, out_file, "GO enrichment for TD and PD genes")
 
 ## tandem length >= 13
 all_input="/media/dell/E/Suppmentary_data/09tandem27/merged.annotation.txt"
