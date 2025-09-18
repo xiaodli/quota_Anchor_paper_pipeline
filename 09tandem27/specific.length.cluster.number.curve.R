@@ -16,7 +16,7 @@ plot = ggplot(df, aes(x=Cluster_length, y=Cluster_number, color = Depth)) +
   scale_y_continuous(expand=c(0, 0)) +
   scale_x_continuous(expand=c(0, 0)) +
   
-  geom_line(aes(x = Cluster_length, y = Cluster_number, group = Species), linewidth = 0.3, alpha = 1) +
+  geom_line(aes(x = Cluster_length, y = Cluster_number, group = Species), linewidth = 1, alpha = 0.51) +
   scale_color_manual(values = custom_colors)+
   theme(    
         panel.background = element_blank(),
@@ -28,24 +28,26 @@ plot = ggplot(df, aes(x=Cluster_length, y=Cluster_number, color = Depth)) +
         
         axis.ticks = element_line(linewidth = 0.1),
         axis.ticks.length = unit(0.5, "mm"),
-        axis.text.x = element_text(size = 21, angle=90, hjust=0),
-        axis.text.y = element_text(size = 21),
+        axis.text.x = element_text(size = 25, angle=90, hjust=0),
+        axis.text.y = element_text(size = 25),
         axis.line.x = element_line(color = "black", linewidth = 0.15),
         axis.line.y = element_line(color = "black", linewidth = 0.15),
-        axis.title.y = element_text(size=28),
-        axis.title.x = element_text(size=28),
+        axis.title.y = element_text(size=30),
+        axis.title.x = element_text(size=30),
        
         
-        legend.title = element_text(size = 25),
-        legend.text = element_text(size = 21),
+        legend.title = element_text(size = 30),
+        legend.text = element_text(size = 25),
         legend.box.spacing = unit(0, "cm"),
         legend.key.spacing.y = unit(1.2, "cm"),
-        legend.key.size = unit(2.9, "lines"),
+        legend.key.size = unit(5.9, "lines"),
         legend.background = element_rect(fill = "white"),
+        legend.position = "top",
         plot.title = element_text(size = 30, hjust = 0.5))
 # png("/media/dell/E/Suppmentary_data/09tandem27/curve.pdf", width=1800, height=1100, res=300)
 pdf("/media/dell/E/Suppmentary_data/09tandem27/curve.pdf", width=18, height=11)
 print(plot)
 dev.off()
+
 
 

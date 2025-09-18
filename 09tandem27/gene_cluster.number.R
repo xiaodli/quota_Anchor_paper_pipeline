@@ -193,7 +193,7 @@ plot = ggplot(df, aes(x=Species, y=Cluster_length_max)) +
         
         plot.margin = margin(l=0.3, t=0.5, b=0.5, r=2.5, unit="cm"),
         plot.title = element_text(size = 23, hjust = 0.5)) + 
-  coord_cartesian(ylim = c(0, 30))
+  coord_cartesian(ylim = c(0, 35))
 # png("/media/dell/E/Suppmentary_data/09tandem27/tandem.number.summary.png", width=2000, height=1400, res=300)
 pdf("/media/dell/E/Suppmentary_data/09tandem27/max.tandem.cluster.summary.pdf", width=17, height=12)
 print(plot)
