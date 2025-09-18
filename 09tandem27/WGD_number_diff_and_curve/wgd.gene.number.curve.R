@@ -41,19 +41,21 @@ plot = ggplot(df, aes(x=Species, y=wgd_gene_number)) +
         axis.ticks.length = unit(0.5, "mm"),
         axis.ticks = element_line(linewidth = 0.1),
         # axis.ticks.x = element_blank(),
-        axis.text.x = element_text(size = 20, angle=300, hjust=0, vjust=1, colour = "black", face ="italic"),
-        axis.text.y = element_text(size = 20),
+        axis.text.x = element_text(size = 25, angle=300, hjust=0, vjust=1, colour = "black", face ="italic"),
+        axis.text.y = element_text(size = 25),
         axis.line.x = element_line(color = "black", linewidth = 0.15),
         axis.line.y = element_line(color = "black", linewidth = 0.15),
-        axis.title.y = element_text(size=26),
+        axis.title.y = element_text(size=30),
         
-        legend.title = element_text(size = 25, hjust=0.5),
-        legend.text = element_text(size = 22, hjust=0.5),
+        legend.title = element_text(size = 30, hjust=0.5),
+        legend.text = element_text(size = 26, hjust=0.5),
         legend.box.spacing = unit(0, "cm"),
         legend.key.spacing.y = unit(2.2, "cm"),
         legend.key.size = unit(3.3, "lines"),
+        legend.position = "top",
         legend.background = element_rect(fill = "white"),
         
+        plot.margin = margin(l=0.3, t=0.5, b=0.5, r=2.5, unit="cm"),
         plot.title = element_text(size = 23, hjust = 0.5)) +
   coord_cartesian(ylim = c(0, 70000))
 # png("/media/dell/E/Suppmentary_data/09tandem27/tandem.number.summary.png", width=2000, height=1400, res=300)
