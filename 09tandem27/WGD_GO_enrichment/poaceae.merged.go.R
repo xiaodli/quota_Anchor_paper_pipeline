@@ -140,7 +140,7 @@ out_file="/media/dell/E/Suppmentary_data/09tandem27/WGD_GO_enrichment/merged.wgd
 enrich_func(all_input, wgd_gene_list_file, enricher_result)
 plot_go_result(enricher_result, out_file, "color", 16, "GO enrichment for WGD genes")
 
-## top 100 orthogroup wgd genes(size) (orthogroup's wgd_ratio > 0.9 and  gene count >40)
+## all orthogroup wgd genes(size) (orthogroup's wgd_ratio > 0.9 and  gene count >40)
 all_input="/media/dell/E/Suppmentary_data/09tandem27/merged.annotation.txt"
 wgd_gene_list_file="/media/dell/E/Suppmentary_data/09tandem27/WGD_GO_enrichment/orthogroup_wgd.gene.txt"
 enricher_result="/media/dell/E/Suppmentary_data/09tandem27/WGD_GO_enrichment/orthogroup_wgd.gene.enricher.result.txt"

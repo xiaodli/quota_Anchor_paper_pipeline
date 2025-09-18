@@ -20,7 +20,7 @@ scp lixd@172.16.30.21:my_data/desktop/poaceae_gene_family/pipeline/final_orthofi
 ```bash
 sed -i 's/:/_/g' merged.wgd.txt
 python read.group_wgd.gene.py Orthogroups.tsv merged.wgd.txt group.stats.txt
-python select.group.py Orthogroups.tsv group.stats.txt 90 100 orthogroup_wgd.gene.txt 40
+python select.group.py Orthogroups.tsv group.stats.txt 90 100000 orthogroup_wgd.gene.txt 40
 ```
 
 ## plot
