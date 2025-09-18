@@ -112,3 +112,86 @@ venn.R
 python false.positive.number.py ./output/zm.dispersed.pairs ./zm.gff3 false.positive.txt
 specific.distance.number.curve.R
 ```
+
+## wgd gene pairs difference (MCScanX vs quota_Anchor)
+
+```bash
+mkdir -p wgd_comparison
+cd wgd_comparison
+```
+
+### quota_Anchor_
+
+```bash
+quota_Anchor pre_col -a diamond -rs ../zm.pep -qs ../zm.pep -db maize.database.blastp -mts 50 -e 1e-5 -b maize.maize.blast -rg ../zm.gff3 -qg ../zm.gff3 -o zm_zm.table -bs 100 -al 0 -rl ../zm.length.txt -ql ../zm.length.txt --overwrite
+quota_Anchor col -i zm_zm.table -o zm_zm.collinearity -s 0 -m 500 -W 0 -E -0.005 -D 25 -a 1 --overwrite -I 3.5
+```
+
+### MCScanX
+
+```bash
+mkdir -p MCScanX
+cd MCScanX
+cp ../maize.maize.blast .
+mv maize.maize.blast zm_zm.blast
+cp ../../input/zm.gff .
+./MCScanX zm_zm
+cd ..
+```
+
+### WGDI
+
+```bash
+mkdir -p WGDI
+cd WGDI
+cp ../../../02JCVI_WGDI_SOI_quota_Anchor/WGDI_result/zm.final.gff3 .
+cp ../../../02JCVI_WGDI_SOI_quota_Anchor/WGDI_result/zm.lens .
+wgdi -icl icl.conf
+cd ..
+```
+
+```bash
+python parse.wgdi.py ./WGDI/zm_zm.collinearity ./WGDI/zm_zm.rm.diagonal.500.collinearity
+python difference_quota_Anchor_MCScanX.py ../zm.gff3 ../zm.gff3 ../zm_zm.table zm_zm.collinearity ./MCScanX/zm_zm.collinearity ./difference.quota_Anchor.MCScanX.txt "quota_Anchor" "MCScanX"
+python sort.py ./difference.quota_Anchor.MCScanX.txt  "MCScanX" difference.quota_Anchor.MCScanX.sorted.txt "quota_Anchor"
+
+python difference_quota_Anchor_MCScanX.py ../zm.gff3 ../zm.gff3 ../zm_zm.table zm_zm.collinearity ./WGDI/zm_zm.rm.diagonal.500.collinearity ./difference.quota_Anchor.WGDI.txt "quota_Anchor" "WGDI"
+python sort.py ./difference.quota_Anchor.WGDI.txt "WGDI" difference.quota_Anchor.WGDI.sorted.txt "quota_Anchor"
+
+python difference_quota_Anchor_MCScanX.py ../zm.gff3 ../zm.gff3 ../zm_zm.table ./WGDI/zm_zm.rm.diagonal.500.collinearity ./MCScanX/zm_zm.collinearity ./difference.WGDI.MCScanX.txt "WGDI" "MCScanX"
+python sort.py ./difference.WGDI.MCScanX.txt "MCScanX" ./difference.WGDI.MCScanX.sorted.txt "WGDI"
+```
+
+### difference dotplot
+
+```bash
+Rscript difference.dotplot.R
+```
+
+### bar difference
+
+```bash
+cat zm_zm.collinearity|grep -v "#"|awk '{OFS="\t"; print $6, $1}'|sed '1d'> zm_zm.collinearity.quota_Anchor.txt
+cat zm_zm.collinearity|grep -v "#"|awk '{OFS="\t"; print $1, $6}'|sed '1d'>> zm_zm.collinearity.quota_Anchor.txt
+less zm_zm.collinearity.quota_Anchor.txt|sort|uniq > zm_zm.collinearity.quota_Anchor.two.txt
+
+cat ./WGDI/zm_zm.rm.diagonal.500.collinearity|grep -v "#"|awk '{OFS="\t"; print $1, $3}'> zm_zm.collinearity.WGDI.txt
+cat ./WGDI/zm_zm.rm.diagonal.500.collinearity|grep -v "#"|awk '{OFS="\t"; print $3, $1}'>> zm_zm.collinearity.WGDI.txt
+less zm_zm.collinearity.WGDI.txt|sort|uniq > zm_zm.collinearity.WGDI.two.txt
+
+cat ./MCScanX/zm_zm.collinearity|grep -v "#"|awk -F "\t" '{OFS="\t"; print $2, $3}'> zm_zm.collinearity.MCScanX.txt
+cat ./MCScanX/zm_zm.collinearity|grep -v "#"|awk -F "\t" '{OFS="\t"; print $3, $2}'>> zm_zm.collinearity.MCScanX.txt
+less zm_zm.collinearity.MCScanX.txt|sort|uniq > zm_zm.collinearity.MCScanX.two.txt
+```
+
+```bash
+python get_bar_difference_R.py zm_zm.collinearity.quota_Anchor.two.txt \
+                                zm_zm.collinearity.WGDI.two.txt \
+                                zm_zm.collinearity.MCScanX.two.txt \
+                                bar_difference_R.txt
+```
+
+```bash
+pie.R
+stack_bar.R
+```

@@ -1,85 +1,86 @@
-# gene classification (focus on tandem and tandem distance = 5)
+# gene classification (max proximal distance = 5)
 
-## run class_gene for 27 grass species
+## TD and PD
+
+### TD and PD number stats
+
+#### run quota_Anchor class_gene for 27 grass species
 
 ```bash
 bash run.class.sh
 ```
 
-## merge tandem proximal files(get tandem distance = 5)
+#### merge tandem proximal files(merged.pairs, tandem distance = 5)
 
 ```bash
 bash merge.tandem.proximal.sh
 ```
 
-## get tandem cluster number for 27 species
+#### Get tandem clusters of 27 species and the genes corresponding to each cluster
 
 ```bash
 bash run.stats.tandem.sh
 ```
 
-## get plot input file
-
-```bash
-python stats.tandem.group.number.27species.py species.txt
-```
-
-## plot
-
-```bash
-cluster.number.R
-specific.length.cluster.number.curve.R
-```
-
-```bash
-Rscript significant.R
-```
-
-## GO for tandem
-
-### interproscan input
-
-```bash
-bash get.pre.interproscan.sh
-```
-
-### running interproscan
-
-```bash
-bash run.interproscan.sh
-```
-
-### get tandem list
+#### get all tandem genes, len(tandem_cluster) > (13,14,15,16) as a file
 
 ```bash
 bash get.tandem.sh
 ```
 
-### select go column from interproscan result
+#### get plot input file (tandem.cluster.number.summary.txt, cluster_number|max_cluster_length|TD&PD gene number)
+
+```bash
+python stats.tandem.group.number.27species.py species.txt
+```
+
+#### plot TD&PD
+
+```bash
+gene_cluster.number.R
+specific.length.cluster.number.curve.R
+Rscript significant.R
+```
+
+### GO for TD and PD
+
+#### interproscan input
+
+```bash
+bash get.pre.interproscan.sh
+```
+
+#### running interproscan
+
+```bash
+bash run.interproscan.sh
+```
+
+#### select go column from interproscan result
 
 ```bash
 bash select.go.column.sh
 ```
 
-### get basic go annotation
+#### get basic go annotation
 
 ```bash
 bash get.annotation.sh
 ```
 
-### go enrichment
+#### go enrichment
 
 ```bash
 bash sp.27.go.sh
 ```
 
-### go dotplot
+#### go dotplot
 
 ```bash
 bash sp.27.go.dotplot.sh
 ```
 
-### poaceae go enrichment and plot(merged)
+#### poaceae go enrichment and plot(merged)
 
 ```bash
 find . -type f|grep "go.annotation.txt"|while read f;do cat $f|sed '1d' >> merged.annotation.txt;done
@@ -89,4 +90,14 @@ find . -type f|grep "tandem14.gene.txt"|while read f;do cat $f >> merged.tandem1
 find . -type f|grep "tandem15.gene.txt"|while read f;do cat $f >> merged.tandem15.txt;done
 find . -type f|grep "tandem16.gene.txt"|while read f;do cat $f >> merged.tandem16.txt;done
 Rscript poaceae.merged.go.R
+```
+
+### GO for WGD
+
+```bash
+cd WGD_number_diff_and_curve
+```
+
+```bash
+WGD_GO_enrichment
 ```

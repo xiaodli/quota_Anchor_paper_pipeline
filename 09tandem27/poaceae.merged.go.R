@@ -26,12 +26,14 @@ plot_go_result <- function (enricher_result, out_file, tandem_title=""){
     data = data[1:20,]
   }
   if (nrow(data) <5) {
-    img_width <- 1200
+    img_width <- 12
   } else if (nrow(data) <8){
-    img_width <- 1300
+    img_width <- 13
   } else{
-    img_width <- 1850
+    img_width <- 18.5
   }
+  color_label_seed_development_and_hormonal_regulation <- c("methyl indole-3-acetate esterase activity",
+                                                            "seed development")
   color_label_redox_homeostasis_and_abiotic_stress_response <- c("aldo-keto reductase (NADPH) activity",
                                                                  "methyl salicylate esterase activity",
                                                                  "methyl jasmonate esterase activity",
@@ -50,15 +52,14 @@ plot_go_result <- function (enricher_result, out_file, tandem_title=""){
                                                                        "galactose catabolic process via UDP-galactose, Leloir pathway")
   color_label_nucleic_acid_metabolism_and_epigenetic_regulation <- c("rRNA (uridine-N3-)-methyltransferase activity",
                                                                      "DNA catabolic process")
-  color_label_seed_development_and_hormonal_regulation <- c("methyl indole-3-acetate esterase activity",
-                                                            "seed development")
+
   
   
   data$GeneRatioNum <- sapply(strsplit(data$GeneRatio, "/"), function(x)
     as.numeric(x[1]) / as.numeric(x[2]))
   data_sorted <- data[order(data$GeneRatioNum), ]
   data_sorted$Description_colored <- sapply(data_sorted$Description, function(desc) {
-    if (desc %in% color_label_redox_homeostasis_and_abiotic_stress_response) {
+    if (desc %in% color_label_seed_development_and_hormonal_regulation) {
       paste0("<span style='color:#EF2C2B;'>", desc, "</span>")
     } else if (desc %in% color_label_nitrogen_transport_and_iron_homeostasis) {
       paste0("<span style='color:#23B2E0;'>", desc, "</span>")
@@ -82,23 +83,23 @@ plot_go_result <- function (enricher_result, out_file, tandem_title=""){
       labs(x = "GeneRatio")
     }) + 
     scale_colour_gradient(low="blue",high="red",labels = scientific_format())+
-    scale_size(range = c(0.5, 2), name = "Count") +
+    scale_size(range = c(2, 6), name = "Count") +
     theme(axis.line = element_blank(),
           panel.background = element_blank(),
           panel.border = element_rect(fill=NA,color="black", linewidth=0.3, linetype="solid"),
           
-          legend.title = element_text(size =10, margin = margin(b = 0.2, l = 0.2, unit = "cm")),
-          legend.key.size = unit(0.3, "lines"),
-          legend.key.height = unit(0.2, "cm"),
-          legend.text = element_text(size = 8),
+          legend.title = element_text(size =25, margin = margin(b = 1.0, l = 0.5, unit = "cm")),
+          legend.key.size = unit(1.3, "lines"),
+          legend.key.height = unit(1.5, "cm"),
+          legend.text = element_text(size = 25),
           
           legend.position="right",
-          legend.spacing.y = unit(1.5, "cm"),
-          legend.box.spacing = unit(0, "cm"),
-          legend.background = element_rect(linetype = "solid", linewidth = 0, colour = "black", fill = NA),
-          
-          axis.text.y = ggtext::element_markdown(size = 10), 
-          axis.text.x = element_text(size = 8, angle=300, hjust=0, vjust=1, colour = "black"),
+          legend.spacing.y = unit(2.5, "cm"),
+          legend.box.spacing = unit(0.5, "cm"),
+          # legend.background = element_rect(linetype = "solid", linewidth = 0, colour = "black", fill = NA),
+          legend.background = element_blank(),
+          axis.text.y = ggtext::element_markdown(size = 28), 
+          axis.text.x = element_text(size = 25, angle=300, hjust=0, vjust=1, colour = "black"),
           
           axis.ticks = element_line(linewidth = 0.15),
           axis.ticks.length = unit(0.4, "mm"),
@@ -107,12 +108,13 @@ plot_go_result <- function (enricher_result, out_file, tandem_title=""){
           axis.line.x = element_line(color = "black", linewidth = 0.1),
           axis.line.y = element_line(color = "black", linewidth = 0.1),
           
-          plot.title = element_text(size = 10, hjust = 0.5),
+          plot.title = element_text(size = 28, hjust = 0.5),
           
-          axis.title.x = element_text(size=9),
+          axis.title.x = element_text(size=25),
           axis.title.y = element_blank()) +
     scale_y_discrete(labels = data_sorted$Description_colored)
-  png(out_file, width=img_width, height=1400, res=300)
+  # png(out_file, width=img_width, height=1400, res=300)
+  pdf(out_file, width=img_width, height=12)
   print(plot)
   dev.off()
 }
@@ -123,11 +125,11 @@ if (nrow(data) > 20) {
   data = data[1:20,]
 }
 if (nrow(data) <5) {
-  img_width <- 1200
+  img_width <- 14
 } else if (nrow(data) <8){
-  img_width <- 1300
+  img_width <- 15
 } else{
-  img_width <- 1700
+  img_width <- 19
 }
 
 data$GeneRatioNum <- sapply(strsplit(data$GeneRatio, "/"), function(x)
@@ -142,36 +144,37 @@ plot = ggplot(data_sorted, aes(x=GeneRatioNum, y= reorder(Description, GeneRatio
     labs(x = "GeneRatio")
   }) + 
   scale_colour_gradient(low="blue",high="red",labels = scientific_format())+
-  scale_size(range = c(0.5, 2), name = "Count") +
+  scale_size(range = c(2, 6), name = "Count") +
   theme(axis.line = element_blank(),
         panel.background = element_blank(),
         panel.border = element_rect(fill=NA,color="black", linewidth=0.3, linetype="solid"),
         
-        legend.title = element_text(size =8, margin = margin(b = 0.2, l = 0.2, unit = "cm")),
-        legend.key.size = unit(0.3, "lines"),
-        legend.key.height = unit(0.2, "cm"),
-        legend.text = element_text(size = 6),
+        legend.title = element_text(size =24, margin = margin(b = 1.2, l = 0.2, unit = "cm")),
+        legend.key.size = unit(2.1, "lines"),
+        legend.key.height = unit(2.0, "cm"),
+        legend.text = element_text(size = 18),
         
         legend.position="right",
-        legend.spacing.y = unit(1.5, "cm"),
-        legend.box.spacing = unit(0, "cm"),
-        legend.background = element_rect(linetype = "solid", linewidth = 0, colour = "black", fill = NA),
-        
-        axis.text.y = element_text(size = 8),
-        axis.text.x = element_text(size = 6, angle=300, hjust=0, vjust=1, colour = "black"),
+        legend.spacing.y = unit(2.0, "cm"),
+        legend.box.spacing = unit(0.4, "cm"),
+        # legend.background = element_rect(linetype = "solid", linewidth = 0, colour = "black", fill = NA),
+        legend.background = element_blank(),
+        axis.text.y = element_text(size = 25),
+        axis.text.x = element_text(size = 20, angle=300, hjust=0, vjust=1, colour = "black"),
         
         axis.ticks = element_line(linewidth = 0.15),
-        axis.ticks.length = unit(0.4, "mm"),
+        axis.ticks.length = unit(1.4, "mm"),
         # axis.ticks.x = element_blank(),
         
         axis.line.x = element_line(color = "black", linewidth = 0.1),
         axis.line.y = element_line(color = "black", linewidth = 0.1),
         
-        plot.title = element_text(size = 8, hjust = 0.5),
+        plot.title = element_text(size = 25, hjust = 0.5),
         
-        axis.title.x = element_text(size=7),
+        axis.title.x = element_text(size=24),
         axis.title.y = element_blank()) 
-png(out_file, width=img_width, height=1400, res=300)
+# png(out_file, width=img_width, height=1400, res=300)
+pdf(out_file, width=img_width, height=14)
 print(plot)
 dev.off()
 }
@@ -180,15 +183,15 @@ dev.off()
 all_input="/media/dell/E/Suppmentary_data/09tandem27/merged.annotation.txt"
 tandem_list_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem.txt"
 enricher_result="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem.enricher.result.txt"
-out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem.enricher.result.png"
+out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem.enricher.result.pdf"
 enrich_func(all_input, tandem_list_file, enricher_result)
-plot_go_result(enricher_result, out_file)
+plot_go_result(enricher_result, out_file, "GO enrichment for tandem genes")
 
 ## tandem length >= 13
 all_input="/media/dell/E/Suppmentary_data/09tandem27/merged.annotation.txt"
 tandem_list_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem13.txt"
 enricher_result="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem13.enricher.result.txt"
-out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem13.enricher.result.png"
+out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem13.enricher.result.pdf"
 enrich_func(all_input, tandem_list_file, enricher_result)
 plot_go_result_longer(enricher_result, out_file, "GO enrichment for gene clusters with length ≥ 13")
 
@@ -196,7 +199,7 @@ plot_go_result_longer(enricher_result, out_file, "GO enrichment for gene cluster
 all_input="/media/dell/E/Suppmentary_data/09tandem27/merged.annotation.txt"
 tandem_list_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem14.txt"
 enricher_result="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem14.enricher.result.txt"
-out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem14.enricher.result.png"
+out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem14.enricher.result.pdf"
 enrich_func(all_input, tandem_list_file, enricher_result)
 plot_go_result_longer(enricher_result, out_file, "GO enrichment for gene clusters with length ≥ 14")
     
@@ -204,7 +207,7 @@ plot_go_result_longer(enricher_result, out_file, "GO enrichment for gene cluster
 all_input="/media/dell/E/Suppmentary_data/09tandem27/merged.annotation.txt"
 tandem_list_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem15.txt"
 enricher_result="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem15.enricher.result.txt"
-out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem15.enricher.result.png"
+out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem15.enricher.result.pdf"
 enrich_func(all_input, tandem_list_file, enricher_result)
 plot_go_result_longer(enricher_result, out_file, "GO enrichment for gene clusters with length ≥ 15")
     
@@ -212,7 +215,7 @@ plot_go_result_longer(enricher_result, out_file, "GO enrichment for gene cluster
 all_input="/media/dell/E/Suppmentary_data/09tandem27/merged.annotation.txt"
 tandem_list_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem16.txt"
 enricher_result="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem16.enricher.result.txt"
-out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem16.enricher.result.png"
+out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem16.enricher.result.pdf"
 enrich_func(all_input, tandem_list_file, enricher_result)
 plot_go_result_longer(enricher_result, out_file, "GO enrichment for gene clusters with length ≥ 16")
 

@@ -18,6 +18,7 @@ custom_colors_light <- c("1" = "#D2E7F2", ">1" = "#B2D8B4")
 custom_colors_dark <- c("1" = "#A6CEE3", ">1" = "#7DCA7C")
 my_comparisons <- list( c("1", ">1"))
 data$Depth <- factor(data$Depth,  c("1", ">1"))
+print(data$Depth)
 plot1 <- ggplot(data, aes(x=Depth, y=!!sym(varib), fill=Depth, color=Depth)) + 
   # facet_nested(~ species_pair + tissue_time, switch = "x") +
   # facet_grid(~species_pair+tissue_time, scales = "free", space = "free") +
@@ -70,7 +71,5 @@ pdf(out_file, width=13, height=12)
 print(plot1)
 dev.off()
 }
-get_plot("/media/dell/E/Suppmentary_data/09tandem27/tandem.cluster.number.summary.txt", 
-         "/media/dell/E/Suppmentary_data/09tandem27/tandem.cluster.number.significant.pdf", "Cluster_number", 6500, "Cluster number")
-get_plot("/media/dell/E/Suppmentary_data/09tandem27/tandem.cluster.number.summary.txt", 
-         "/media/dell/E/Suppmentary_data/09tandem27/tandem.number.significant.pdf", "tandem_total_number", 17000, "TD and PD gene number")
+get_plot("/media/dell/E/Suppmentary_data/09tandem27/WGD_number_diff_and_curve/wgd.gene.number.summary.txt", 
+         "/media/dell/E/Suppmentary_data/09tandem27/WGD_number_diff_and_curve/wgd.gene.number.significant.pdf", "wgd_gene_number", 80000, "WGD gene number")

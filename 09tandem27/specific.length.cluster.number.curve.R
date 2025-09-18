@@ -23,26 +23,28 @@ plot = ggplot(df, aes(x=Cluster_length, y=Cluster_number, color = Depth)) +
         panel.spacing = unit(0.05, "lines"),
         panel.border = element_blank(),
         
-        strip.text = element_text(size = 7, angle=90, margin = margin(c(0,0,0,0)), colour = "black", face ="italic") ,
+        strip.text = element_text(size = 21, angle=90, margin = margin(c(0,0,0,0)), colour = "black", face ="italic") ,
         strip.placement = "outside", 
         
         axis.ticks = element_line(linewidth = 0.1),
         axis.ticks.length = unit(0.5, "mm"),
-        axis.text.x = element_text(size = 7, angle=90, hjust=0),
-        axis.text.y = element_text(size = 7),
+        axis.text.x = element_text(size = 21, angle=90, hjust=0),
+        axis.text.y = element_text(size = 21),
         axis.line.x = element_line(color = "black", linewidth = 0.15),
         axis.line.y = element_line(color = "black", linewidth = 0.15),
-        axis.title.y = element_text(size=8),
-        axis.title.x = element_text(size=8),
+        axis.title.y = element_text(size=28),
+        axis.title.x = element_text(size=28),
        
         
-        legend.title = element_text(size = 7),
-        legend.text = element_text(size = 7),
+        legend.title = element_text(size = 25),
+        legend.text = element_text(size = 21),
         legend.box.spacing = unit(0, "cm"),
-        legend.key.spacing.x = unit(1.2, "cm"),
+        legend.key.spacing.y = unit(1.2, "cm"),
+        legend.key.size = unit(2.9, "lines"),
         legend.background = element_rect(fill = "white"),
-        plot.title = element_text(size = 12.5, hjust = 0.5))
-png("/media/dell/E/Suppmentary_data/09tandem27/curve.png", width=1800, height=1100, res=300)
+        plot.title = element_text(size = 30, hjust = 0.5))
+# png("/media/dell/E/Suppmentary_data/09tandem27/curve.pdf", width=1800, height=1100, res=300)
+pdf("/media/dell/E/Suppmentary_data/09tandem27/curve.pdf", width=18, height=11)
 print(plot)
 dev.off()
 
