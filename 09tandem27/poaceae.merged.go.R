@@ -44,14 +44,14 @@ plot_go_result <- function (enricher_result, out_file, tandem_title=""){
                                                                  "ammonia-lyase activity",
                                                                  "salicylic acid metabolic process",
                                                                  "detoxification")
-  color_label_nitrogen_transport_and_iron_homeostasis <- c("nitrate transmembrane transporter activity",
-                                                           "iron-nicotianamine transmembrane transporter activity",
-                                                           "response to iron ion")
   color_label_carbohydrate_metabolism_and_sugar_related_pathways  <- c("glucan catabolic process",  
                                                                        "aldose 1-epimerase activity",
                                                                        "galactose catabolic process via UDP-galactose, Leloir pathway")
   color_label_nucleic_acid_metabolism_and_epigenetic_regulation <- c("rRNA (uridine-N3-)-methyltransferase activity",
                                                                      "DNA catabolic process")
+  color_label_nitrogen_transport_and_iron_homeostasis <- c("nitrate transmembrane transporter activity",
+                                                           "iron-nicotianamine transmembrane transporter activity",
+                                                           "response to iron ion")
 
   
   
@@ -67,7 +67,7 @@ plot_go_result <- function (enricher_result, out_file, tandem_title=""){
       paste0("<span style='color:#A5CC5B;'>", desc, "</span>")
     } else if (desc %in% color_label_nucleic_acid_metabolism_and_epigenetic_regulation) {
       paste0("<span style='color:#EEBEC0;'>", desc, "</span>")
-    } else if (desc %in% color_label_seed_development_and_hormonal_regulation) {
+    } else if (desc %in% color_label_nitrogen_transport_and_iron_homeostasis) {
       paste0("<span style='color:#000000;'>", desc, "</span>")
     } else {
       desc
@@ -218,6 +218,7 @@ enricher_result="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem16.enric
 out_file="/media/dell/E/Suppmentary_data/09tandem27/merged.tandem16.enricher.result.pdf"
 enrich_func(all_input, tandem_list_file, enricher_result)
 plot_go_result_longer(enricher_result, out_file, "GO enrichment for gene clusters with length ≥ 16")
+
 
 
 
