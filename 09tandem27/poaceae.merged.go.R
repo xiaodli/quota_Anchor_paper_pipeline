@@ -61,7 +61,7 @@ plot_go_result <- function (enricher_result, out_file, tandem_title=""){
   data_sorted$Description_colored <- sapply(data_sorted$Description, function(desc) {
     if (desc %in% color_label_seed_development_and_hormonal_regulation) {
       paste0("<span style='color:#EF2C2B;'>", desc, "</span>")
-    } else if (desc %in% color_label_nitrogen_transport_and_iron_homeostasis) {
+    } else if (desc %in% color_label_redox_homeostasis_and_abiotic_stress_response) {
       paste0("<span style='color:#23B2E0;'>", desc, "</span>")
     } else if (desc %in% color_label_carbohydrate_metabolism_and_sugar_related_pathways) {
       paste0("<span style='color:#A5CC5B;'>", desc, "</span>")
