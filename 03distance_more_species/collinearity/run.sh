@@ -5,8 +5,8 @@ gff_length_dir="/media/dell/E/Suppmentary_data/05sequence/01pipeline_raw_data"
 pepdir="/media/dell/E/Suppmentary_data/05sequence/02longest"
 ref_array=("Aegilops.searsii" "Aegilops.searsii" "Aegilops.searsii" "Saccharum.spontaneum" "Chloris.virgata" "Oryza.sativa" "Eragrostis.tef" "Echinochloa.colona" "Brachypodium.distachyon" "Coix.lacryma.jobi" "Achnatherum.splendens" "Avena.sativa.ot3098" "Triticum.monococcum" "Chloris.virgata" "Setaria.italica" "Cenchrus.macrourus" "Secale.cereale" "Setaria.viridis" "Saccharum.spontaneum" "Sorghum.bicolor" "Setaria.italica" "Leersia.perrieri" "Echinochloa.colona" "Achnatherum.splendens" "Saccharum.spontaneum" "Hordeum.marinum" "Poa.annua" "Saccharum.spontaneum" "Setaria.italica" "Setaria.viridis")
 query_array=("Coix.lacryma.jobi" "Oryza.sativa" "Cenchrus.macrourus" "Setaria.viridis" "Thinopyrum.elongatum" "Triticum.monococcum" "Panicum.hallii" "Sorghum.bicolor" "Oryza.sativa" "Thinopyrum.elongatum" "Cenchrus.macrourus" "Bromus.tectorum" "Zea.mays" "Setaria.italica" "Avena.sativa.ot3098" "Panicum.hallii" "Setaria.viridis" "Sorghum.bicolor" "Cenchrus.macrourus" "Lolium.perenne" "Panicum.hallii" "Triticum.monococcum" "Panicum.hallii" "Thinopyrum.elongatum" "Thinopyrum.elongatum" "Cenchrus.macrourus" "Setaria.italica" "Panicum.hallii" "Leersia.perrieri" "Panicum.hallii")
-r_value_array=("2" "1" "2" "1" "1" "1" "1" "1" "1" "1" "2" "1" "2" "1" "3" "1" "1" "1" "2" "1" "1" "1" "1" "1" "1" "2" "1" "1" "2" "1")
-q_value_array=("1" "1" "1" "4" "1" "1" "2" "3" "1" "2" "2" "3" "1" "1" "1" "2" "1" "1" "4" "1" "1" "2" "3" "2" "4" "1" "2" "4" "1" "1" )
+r_value_array=("1" "1" "2" "1" "1" "1" "1" "1" "1" "1" "2" "1" "2" "1" "3" "1" "1" "1" "2" "1" "1" "1" "1" "1" "1" "2" "1" "1" "1" "1")
+q_value_array=("1" "1" "1" "4" "1" "1" "2" "3" "1" "1" "2" "3" "1" "1" "1" "2" "1" "1" "4" "1" "1" "1" "3" "2" "4" "1" "2" "4" "1" "1" )
 
 for array_index in "${!ref_array[@]}"; do {
           ref_species=${ref_array[array_index]}
