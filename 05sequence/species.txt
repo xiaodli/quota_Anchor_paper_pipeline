@@ -6,12 +6,12 @@ Brachypodium.distachyon.pep 1
 Bromus.tectorum.pep 1
 Cenchrus.macrourus.pep 2
 Chloris.virgata.pep 1
-Coix.lacryma.jobi.pep 2
+Coix.lacryma.jobi.pep 1
 Echinochloa.colona.pep 3
 Eragrostis.tef.pep 2
 Hordeum.marinum.pep 1
 Joinvillea.ascendens.pep 1
-Leersia.perrieri.pep 2
+Leersia.perrieri.pep 1
 Lolium.perenne.pep 1
 Miscanthus.lutarioriparius.pep 2
 Oryza.sativa.pep 1
