@@ -34,4 +34,4 @@ Enrichment analysis of TD, PD and WGD genes in 27 Poaceae species.
 
 ## 10Ericales
 
-Position camellia sinensis's recent wgd relative species divergence.
+Position camellia sinensis's recent wgd relative to species divergence.
